@@ -88,7 +88,7 @@ for (var i = 1; i <= 20; i++) {
 }
 console.log(sum); */
 
-var sum = 100;
+/* var sum = 100;
 
 while (1) {
     var op = prompt("请输入你的操作：\n1、存钱\n2、取钱\n3、显示余额\n4、退出");
@@ -109,4 +109,23 @@ while (1) {
     if (parseInt(op) == 4) {
         break;
     }
+} */
+/* function cal(num1, num2, op) {
+    if (op == '+') {
+        return num1 + num2;
+    }
+    if (op == '-') {
+        return num1 - num2;
+    }
+    if (op == '*') {
+        return num1 * num2;
+    }
+    if (op == '/') {
+        return num1 / num2;
+    }
 }
+var n1 = prompt("请输入第一个数字：");
+var n2 = prompt("请输入第二个数字：");
+var option = prompt("请输入操作符：");
+var res = cal(parseInt(n1), parseInt(n2), option);
+alert(res); */
