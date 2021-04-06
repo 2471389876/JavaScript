@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>What to buy</h1>
+    <p title='a gentle reminder'>Don't forget to buy this stuff.</p>
+    <p>This is an apple.</p>
+    <ul id="purchases">
+        <li>A tin of beans</li>
+        <li class="sale">Cheese</li>
+        <li class="sale important">Milk</li>
+    </ul>
+    <script>
+        var attr = document.getElementsByTagName("p");
+        for (var i = 0; i < attr.length; i++) {
+            var title = attr[i].getAttribute("title");
+            if (title == null) attr[i].setAttribute("title", "a good goods");
+            alert(attr[i].getAttribute("title"));
+        }
+    </script>
+</body>
+
+</html>
