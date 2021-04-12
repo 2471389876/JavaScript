@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue</title>
+</head>
+
+<body>
+    <!-- v-text标签使用语法
+    <div id="app">
+        使用v-text会替换标签内所有数据 
+        <h2 v-text="message+'!'">深圳</h2>
+        <h2 v-text="info"></h2>
+        使用{{}}方式只会替换部分 
+        <h2>{{message}}深圳</h2>
+    </div> -->
+    <!-- v-html使用语法：可以解析html内部结构
+    <div id="app">
+        <p v-text="message"></p>
+        <p v-html="message"></p>
+    </div> -->
+    <!-- v-on使用语法，相当于@符号 
+    <div id="app">
+        <input type="button" value="v-on使用" v-on:click="doIt">
+        <input type="button" value="v-on使用" @click="doIt">
+        <input type="button" value="v-on使用" v-on:dblclick="doIt">
+        <p @click="changefood">{{food}}</p>
+    </div> -->
+    <!--计数器案例
+         <div id="app">
+        <div class="index_num">
+            <button @click="sub">-</button>
+            <span>{{num}}</span>
+            <button @click="add">+</button>
+        </div>
+    </div> -->
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="demo2.js"></script>
+</body>
+
+</html>
