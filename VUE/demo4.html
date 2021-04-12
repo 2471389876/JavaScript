@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- v-for指令遍历数组
+    <div id="app">
+        <input type="button" value="添加数据" @click="add">
+        <input type="button" value="删除数据" @click="remove">
+        <ul>
+            <li v-for="(item,index) in arr">{{index+1}}黑马程序员{{item}}</li>
+        </ul>
+        <h2 v-for="item in vet" v-bind:title="item.name">{{item.name}}</h2>
+    </div> -->
+    <!-- v-on补充
+    <div id="app">
+        <input type="button" value="添加数据" @click="add(66,'你好')">
+        <input type="text" @keyup.enter="remove">
+
+    </div> -->
+    <!-- v-model绑定表单，双向绑定
+    <div id="app">
+        <input type="button" value="添加数据" @click="setM">
+        <input type="text" v-model="message" @keyup.enter="getM">{{message}}
+
+    </div> -->
+
+    <section id="todoapp">
+        <header class="header">
+            <h1>小黑记事本</h1>
+            <input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="请输入任务"
+                class="new-todo">
+        </header>
+        <section class="main">
+            <ul class="todo-list">
+                <li class="todo" v-for="(item,index) in list">
+                    <div class="view">
+                        <span class="index">{{index+1}}.</span>
+                        <label>{{item}}</label>
+                        <button class="destroy" @click="remove(index)"></button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <footer class="footer">
+            <span class="todo-count" v-if="list.length!=0">
+                <strong>{{list.length}}</strong>items left
+            </span>
+            <button class="clear-completed" @click="clear" v-show="list.length!=0">Clear</button>
+        </footer>
+    </section>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="demo4.js"></script>
+</body>
+
+</html>
