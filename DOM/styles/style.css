@@ -1,0 +1,12 @@
+#slideshow{
+    width: 200px;
+    height: 200px;
+    position:relative;
+    overflow: hidden;
+}
+#preview{
+    position:absolute;
+}
+div{
+    border:1px solid blue;
+}
