@@ -13,17 +13,20 @@
 </head>
 
 <body>
-    <button>快速</button>
-    <button>快速</button>
-    <button>快速</button>
-    <button>快速</button>
-    <button>快速</button>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
     <script>
         $(function () {
-            $("button").click(function () {
-                $(this).css("background", "pink");
-                $(this).siblings("button").css("background", "");
+            var sum = 0;
+            var arr = ["red", "green", "blue"];
+            $("div").each(function (index, ele) {
+                $(ele).css("color", arr[index]);
+                sum += parseInt($(ele).text());
             })
+            console.log(sum);
+            var span = $("<span>dog</span>");
+            $("div").after(span);
         })
     </script>
 </body>
