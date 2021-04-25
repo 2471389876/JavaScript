@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+
+        .current {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <li>我能</li>
+        <li>我能</li>
+        <li>我能</li>
+    </ul>
+    <ol>
+
+    </ol>
+    <script>
+        $(function () {
+            $("div").on({
+                // mouseover: function () {
+                //     $(this).css("background", "red");
+                // },
+                click: function () {
+                    $(this).css("background", "blue");
+                },
+            });
+            $("div").on("mouseenter mouseleave", function () {
+                $(this).toggleClass("current");
+            });
+            $("ul").on("click", "li", function () {
+                alert(11);
+            });
+            $("ol").on("click", "li", function () {
+                alert(22);
+            })
+            var li = $("<li>123</li>");
+            $("ol").append(li);
+        })
+    </script>
+</body>
+
+</html>
